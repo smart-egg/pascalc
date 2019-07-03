@@ -5,7 +5,7 @@ const request = require('request');
 //const FINAL_URL = "https://prod-61.westeurope.logic.azure.com:443/workflows/a97e30c6dd51449f8def293b023363c2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fYabTi77sRRh4RH0HGtMbeKryTHmdB8BaoB-nfW_m38";
 
 module.exports = function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request. Changed.');
+    context.log('JavaScript HTTP trigger function processed a request. Changed. and changed');
 
     const msg = req.body;
 
