@@ -2,16 +2,14 @@ module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
     if (req.query.name || (req.body && req.body.name)) {
-        // Invoice date.
-        var invoice_date = new Date();
-        invoice_date.setTime(1561624970/*req.body.created*/);
         context.res = {
             // status: 200, /* Defaults to 200 */
             headers: { "content-type" : "application/json"},
             body: {
                 name: (req.query.name || req.body.name),
                 customer_email: req.body.data.object.customer_email,
-                invoice_date: invoice_date.toISOString()
+                invoice_date: new Date(req.body.created * 1000).toISOString(),
+                lines_count : req.body.data.object.lines.data.length
             }
         };
     }
