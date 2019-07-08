@@ -1,0 +1,281 @@
+{
+  "id": "evt_1EptBuAgWn8BF3PuZMOQys6t",
+  "object": "event",
+  "api_version": "2018-11-08",
+  "created": 1561624970,
+  "data": {
+    "object": {
+      "id": "in_1Eod82AgWn8BF3Pu5FEIaq9g",
+      "object": "invoice",
+      "account_country": "IT",
+      "account_name": "smart-egg srl",
+      "amount_due": 58072,
+      "amount_paid": 58072,
+      "amount_remaining": 0,
+      "application_fee": null,
+      "attempt_count": 1,
+      "attempted": true,
+      "auto_advance": false,
+      "billing": "charge_automatically",
+      "billing_reason": "subscription_cycle",
+      "charge": "py_1Eoe4wAgWn8BF3Pul8Yjpgp6",
+      "collection_method": "charge_automatically",
+      "created": 1561324896,
+      "currency": "eur",
+      "custom_fields": null,
+      "customer": "cus_EPDhYoH9BH33e2",
+      "customer_address": null,
+      "customer_email": "amministrazione@masterbeautyitalia.com",
+      "customer_name": null,
+      "customer_phone": null,
+      "customer_shipping": {
+        "address": {
+          "city": "Cittiglio",
+          "country": "IT",
+          "line1": "via San Giulio, 46",
+          "line2": "",
+          "postal_code": "21033",
+          "state": "VA"
+        },
+        "name": "",
+        "phone": "+393661677234"
+      },
+      "customer_tax_exempt": "none",
+      "customer_tax_ids": [
+        {
+          "type": "eu_vat",
+          "value": "IT02831580127"
+        }
+      ],
+      "date": 1561324896,
+      "default_payment_method": null,
+      "default_source": null,
+      "default_tax_rates": [
+        {
+          "id": "txr_1CLEkUAgWn8BF3Pujx5GSSnU",
+          "object": "tax_rate",
+          "active": true,
+          "created": 1524766998,
+          "description": null,
+          "display_name": "Tax",
+          "inclusive": false,
+          "jurisdiction": null,
+          "livemode": true,
+          "metadata": {
+          },
+          "percentage": 22
+        }
+      ],
+      "description": "Canone mensile servizio convertitore ordini.",
+      "discount": null,
+      "due_date": null,
+      "ending_balance": 0,
+      "finalized_at": 1561328549,
+      "footer": null,
+      "hosted_invoice_url": "https://pay.stripe.com/invoice/invst_17d0dDLhAfHKFVd1VTpK8LnL0v",
+      "invoice_pdf": "https://pay.stripe.com/invoice/invst_17d0dDLhAfHKFVd1VTpK8LnL0v/pdf",
+      "lines": {
+        "object": "list",
+        "data": [
+          {
+            "id": "sli_94820b00ff0427",
+            "object": "line_item",
+            "amount": 5000,
+            "currency": "eur",
+            "description": "1 × my smart-egg (at €50.00 / month)",
+            "discountable": true,
+            "livemode": true,
+            "metadata": {
+            },
+            "period": {
+              "end": 1563916896,
+              "start": 1561324896
+            },
+            "plan": {
+              "id": "plan_EPDxqAmcOs9cRY",
+              "object": "plan",
+              "active": true,
+              "aggregate_usage": null,
+              "amount": 5000,
+              "billing_scheme": "per_unit",
+              "created": 1548402830,
+              "currency": "eur",
+              "interval": "month",
+              "interval_count": 1,
+              "livemode": true,
+              "metadata": {
+              },
+              "nickname": "Base",
+              "product": "prod_EPDw9AzasC59HR",
+              "tiers": null,
+              "tiers_mode": null,
+              "transform_usage": null,
+              "trial_period_days": 30,
+              "usage_type": "licensed"
+            },
+            "proration": false,
+            "quantity": 1,
+            "subscription": "sub_EPE3qy9RQeTd7d",
+            "subscription_item": "si_EPE3lXkpxWZGz5",
+            "tax_amounts": [
+              {
+                "amount": 1100,
+                "inclusive": false,
+                "tax_rate": "txr_1CLEkUAgWn8BF3Pujx5GSSnU"
+              }
+            ],
+            "tax_rates": [
+            ],
+            "type": "subscription"
+          },
+          {
+            "id": "sli_2711a9d8b976cf",
+            "object": "line_item",
+            "amount": 39600,
+            "currency": "eur",
+            "description": "40 user × appConsento (at €9.90 / month)",
+            "discountable": true,
+            "livemode": true,
+            "metadata": {
+            },
+            "period": {
+              "end": 1563916896,
+              "start": 1561324896
+            },
+            "plan": {
+              "id": "plan_DbyIN7es2y2ctt",
+              "object": "plan",
+              "active": true,
+              "aggregate_usage": null,
+              "amount": 990,
+              "billing_scheme": "per_unit",
+              "created": 1537115436,
+              "currency": "eur",
+              "interval": "month",
+              "interval_count": 1,
+              "livemode": true,
+              "metadata": {
+              },
+              "nickname": "appConsento-Base-Promo-EUR-9-90",
+              "product": "prod_D92xMHzefpKhkv",
+              "tiers": null,
+              "tiers_mode": null,
+              "transform_usage": null,
+              "trial_period_days": 1,
+              "usage_type": "licensed"
+            },
+            "proration": false,
+            "quantity": 40,
+            "subscription": "sub_EPE3qy9RQeTd7d",
+            "subscription_item": "si_EaIegEiYGG3MXz",
+            "tax_amounts": [
+              {
+                "amount": 8712,
+                "inclusive": false,
+                "tax_rate": "txr_1CLEkUAgWn8BF3Pujx5GSSnU"
+              }
+            ],
+            "tax_rates": [
+            ],
+            "type": "subscription"
+          },
+          {
+            "id": "sli_44a168f509a898",
+            "object": "line_item",
+            "amount": 3000,
+            "currency": "eur",
+            "description": "1 user × appConsento (at €30.00 / month)",
+            "discountable": true,
+            "livemode": true,
+            "metadata": {
+            },
+            "period": {
+              "end": 1563916896,
+              "start": 1561324896
+            },
+            "plan": {
+              "id": "plan_EPDrtsadjjQkDR",
+              "object": "plan",
+              "active": true,
+              "aggregate_usage": null,
+              "amount": 3000,
+              "billing_scheme": "per_unit",
+              "created": 1548402473,
+              "currency": "eur",
+              "interval": "month",
+              "interval_count": 1,
+              "livemode": true,
+              "metadata": {
+              },
+              "nickname": "appConsento reporting",
+              "product": "prod_D92xMHzefpKhkv",
+              "tiers": null,
+              "tiers_mode": null,
+              "transform_usage": null,
+              "trial_period_days": 30,
+              "usage_type": "licensed"
+            },
+            "proration": false,
+            "quantity": 1,
+            "subscription": "sub_EPE3qy9RQeTd7d",
+            "subscription_item": "si_EaIpglnO0culMo",
+            "tax_amounts": [
+              {
+                "amount": 660,
+                "inclusive": false,
+                "tax_rate": "txr_1CLEkUAgWn8BF3Pujx5GSSnU"
+              }
+            ],
+            "tax_rates": [
+            ],
+            "type": "subscription"
+          }
+        ],
+        "has_more": false,
+        "total_count": 3,
+        "url": "/v1/invoices/in_1Eod82AgWn8BF3Pu5FEIaq9g/lines"
+      },
+      "livemode": true,
+      "metadata": {
+      },
+      "next_payment_attempt": null,
+      "number": "30DB844-0010",
+      "paid": true,
+      "payment_intent": "pi_1Eoe4vAgWn8BF3PueelksqpW",
+      "period_end": 1561324896,
+      "period_start": 1558646496,
+      "post_payment_credit_notes_amount": 0,
+      "pre_payment_credit_notes_amount": 0,
+      "receipt_number": null,
+      "starting_balance": 0,
+      "statement_descriptor": null,
+      "status": "paid",
+      "status_transitions": {
+        "finalized_at": 1561328549,
+        "marked_uncollectible_at": null,
+        "paid_at": 1561624969,
+        "voided_at": null
+      },
+      "subscription": "sub_EPE3qy9RQeTd7d",
+      "subtotal": 47600,
+      "tax": 10472,
+      "tax_percent": 22,
+      "total": 58072,
+      "total_tax_amounts": [
+        {
+          "amount": 10472,
+          "inclusive": false,
+          "tax_rate": "txr_1CLEkUAgWn8BF3Pujx5GSSnU"
+        }
+      ],
+      "webhooks_delivered_at": 1561324911
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "invoice.payment_succeeded"
+}
