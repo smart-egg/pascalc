@@ -1,8 +1,8 @@
 // REVIEW
-// [!] I'm assuming some formulas, please check them.
-// [!] Should I take out the letters on supplierInvoiceNumber? (ABC123 → 123)
-// [!] I'm using the same currency/exchangeRate in both the account and contraVatAccount sections
-// [!] I mapped supplierNumber to supplierID. Is it correct or should it be another number?
+// [!] I'm assuming some formulas, please check them. ->> Which formulas?
+// [!] Should I take out the letters on supplierInvoiceNumber? (ABC123 → 123) ->> NO
+// [!] I'm using the same currency/exchangeRate in both the account and contraVatAccount sections ->> YES
+// [!] I mapped supplierNumber to supplierID. Is it correct or should it be another number? ->> CORRECT
 
 // Settings
 const FINAL_URL = "https://rest.reviso.com/vouchers/drafts/supplier-invoices";
