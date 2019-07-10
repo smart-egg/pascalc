@@ -40,14 +40,14 @@ let postOptions = {
     postOptions.body = mapMessage(msg);
 
 request(postOptions, function (err, res, reqBody) {
-
+//Error Case 
     if (err) {
         context.res = {
             status: res.statusCode,
             body: err
         };
     } else {
-        
+//normal case        
         context.res = {
             status: res.statusCode,
             body: reqBody
