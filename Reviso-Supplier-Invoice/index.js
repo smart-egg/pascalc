@@ -20,16 +20,7 @@ const ERRORS = {
 // Libraries
 const request = require('request');
 
-// Endpoint
-exports.endpoint = function(request, response) {
-    let rawBody = '';
-    request.on('data', (chunk) => {
-        rawBody += chunk;
-    });
-    request.on('end', () => {
-        endpointRelay(rawBody, response);
-    });
-}
+module.exports = function (context, req) {
 
 // Post options
 let postOptions = {
@@ -40,37 +31,44 @@ let postOptions = {
     headers: HEADERS
 };
 
-// Functions
-function endpointRelay (rawBody, response) {
-
-    // Parse JSON and finish if badly constructed
-    const msg = parseBody(rawBody);
-    if ("error" in msg) {
-        response.end(formatError(msg.error));
-    }
+    const msg = parseBody(req.body);
+   // if ("error" in msg) {
+   //      res.end(formatError(msg.error));
+   //  }
     
-    // Relay info to API if correctly formed
+    // format body
     postOptions.body = mapMessage(msg);
-    //postOptions.body = {"test":"yes"};
-    
-    request(postOptions, function (err, res, body) {
-        if(err) {
-            response.end(err);
-        }
-        response.end(JSON.stringify(body));
-    });
-}
 
+request(postOptions, function (err, res, reqBody) {
+
+    if (err) {
+        context.res = {
+            status: res.statusCode,
+            body: err
+        };
+    } else {
+        
+        context.res = {
+            status: res.statusCode,
+            body: reqBody
+        };
+    }
+    context.done();
+});
+
+// check for json
 function parseBody(rawBody) {
     let msg = {};
     try {
-        msg = JSON.parse(rawBody);
+      
+        msg = JSON.parse(JSON.stringify(rawBody));
     }  catch (e) {
         msg.error = ERRORS.BAD_INPUT;
     }
     return msg;
 }
 
+// format body for http post
 function mapMessage (msg) {
      
     // Compute properties which depend on input values   
@@ -156,4 +154,5 @@ function formatError(errorMsg) {
         "message": "${errorMsg}"
     }`;
     return errorTpl;
+}
 }
